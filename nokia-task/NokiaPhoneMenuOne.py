@@ -33,33 +33,33 @@ while running:
 
     """
 
-    user_choice = int(input(f"{menu}"))
+    user_choice = (input(f"{menu}"))
 
     match user_choice:
 
-        case 1: 
+        case "1": 
           
             phoneBookMenu = """ 
-            You are now on the phone book
-            Menu, please enter a number 
-            to select an option.
+    You are now on the phone book
+    Menu, please enter a number 
+    to select an option.
 
-            ════════════════════════════════
-                   PHONE BOOK MENU
-            ════════════════════════════════
+    ════════════════════════════════
+           PHONE BOOK MENU
+    ════════════════════════════════
 
-                  1. Search
-                  2. Service Nos.
-                  3. Add name
-                  4. Erase
-                  5. Edit
-                  6. Copy                     
-                  7. Assign tone
-                  8. Send b'card
-                  9. Options
-                  10. Back
+          1. Search
+          2. Service Nos.
+          3. Add name
+          4. Erase
+          5. Edit
+          6. Copy                     
+          7. Assign tone
+          8. Send b'card
+          9. Options
+          10. Back
 
-            ════════════════════════════════
+    ════════════════════════════════
 
                 """
 
@@ -67,33 +67,75 @@ while running:
 
             while stayinPhonebook:
 
-                phoneBookMenuChoice = int(input(f"{phoneBookMenu}")) 
+                phoneBookMenuChoice = (input(f"{phoneBookMenu}")) 
 
                 match phoneBookMenuChoice:
 
-                    case 1: 
+                    case "1": 
                         print("You are now on the search menu")
 
-                    case 2:
+                    case "2":
                         print("You are now on the Service Nos menu")
 
-                    case 3:
+                    case "3":
                         print("You are now on the Add name  menu")
 
-                    case 4:
+                    case "4":
                         print("You are now on the Erase menu")
 
-                    case 5:
+                    case "5":
+                        print("You are now on the Edit menu")
+
+                    case "6":
                         print("You are now on the Copy menu")
 
-                    case 6:
+                    case "7":
                         print("You are now on the Assign tone menu")
 
-                    case 7:
+                    case "8":
                         print("You are now on the Send b'card menu")
 
-                    case 8:
-                        print("You are now on the Options menu")
+                    case "9":
+
+                            stayinOptionsMenu = True
+
+                            while stayinOptionsMenu:
+
+                                optionsMenu = """
+                    You are now on the Options Menu.
+                    Please enter a number
+                    to select an option.
+
+                    ════════════════════════════════
+                          OPTIONS MENU
+                    ════════════════════════════════
+
+                          1. Memory in use
+                          2. Type of view
+                          3. Memory status
+                          4. Back
+
+                    ════════════════════════════════
+                                """
+
+                                optionsMenuChoice = int(input(f"{optionsMenu}"))
+
+                                match optionsMenuChoice:
+
+                                    case 1:
+                                        print("You are now on the Write messages menu")
+
+                                    case 2:
+                                        print("You are now on the Inbox menu")
+
+                                    case 3:
+                                        print("You are now on the Received Calls menu")
+
+                                    case 4:
+                                        
+                                        stayinOptionsMenu = False
+
+
 
                     case 10:
                         stayinPhonebook = False
@@ -106,26 +148,26 @@ while running:
             while stayinMessageMenu:
 
                 messageMenu = """
-                    You are now on the Message Menu.
-                    Please enter a number
-                    to select an option.
+    You are now on the Message Menu.
+    Please enter a number
+    to select an option.
 
-                    ════════════════════════════════
-                          MESSAGE MENU
-                    ════════════════════════════════
+    ════════════════════════════════
+          MESSAGE MENU
+    ════════════════════════════════
 
-                          1. Write Messages
-                          2. Inbox
-                          3. Received calls
-                          4. Dialed numbers
-                          5. Erase recent call lists
-                          6. Show call duration
-                          7. Show call costs
-                          8. Call cost settings
-                          9. Prepaid credit
-                          10. Back
+          1. Write Messages
+          2. Inbox
+          3. Received calls
+          4. Dialed numbers
+          5. Erase recent call lists
+          6. Show call duration
+          7. Show call costs
+          8. Call cost settings
+          9. Prepaid credit
+          10. Back
 
-                    ════════════════════════════════
+    ════════════════════════════════
                 """
 
                 messageMenuChoice = int(input(f"{messageMenu}"))
@@ -148,61 +190,67 @@ while running:
                         print("You are now on the Erase recent call lists menu")
 
                     case 6:
+                        
+                        stayinCallDurationMenu = True
 
-                        showCallDuration = """
-                            You are now on the Show call duration Menu.
-                            Please enter a number
-                            to select an option.
+                        while stayinCallDurationMenu:
 
-                            ════════════════════════════════
-                               SHOW CALL DURATION MENU
-                            ════════════════════════════════
+                                showCallDuration = """
+    You are now on the Show call duration Menu.
+    Please enter a number
+    to select an option.
 
-                                  1. Last Call Duration
-                                  2. All calls Duration
-                                  3. Received calls duration
-                                  4. Dialed calls duration
-                                  5. Clear timers
+    ════════════════════════════════
+       SHOW CALL DURATION MENU
+    ════════════════════════════════
 
-                            ════════════════════════════════
-                        """
+          1. Last Call Duration
+          2. All calls Duration
+          3. Received calls duration
+          4. Dialed calls duration
+          5. Clear timers
+          6. Back
+    ════════════════════════════════
+                                """
 
-                        showCallDurationChoice = int(input(f"{showCallDuration}"))
+                                showCallDurationChoice = int(input(f"{showCallDuration}"))
 
-                        match showCallDurationChoice:
+                                match showCallDurationChoice:
 
-                            case 1:
-                                print("You are now on the Last Call duration menu")
+                                    case 1:
+                                        print("You are now on the Last Call duration menu")
 
-                            case 2:
-                                print("You are now on all calls duration menu")
+                                    case 2:
+                                        print("You are now on all calls duration menu")
 
-                            case 3:
-                                print("You are now on the Received Calls duration menu")
+                                    case 3:
+                                        print("You are now on the Received Calls duration menu")
 
-                            case 4:
-                                print("You are now on the Dialed calls duration menu")
+                                    case 4:
+                                        print("You are now on the Dialed calls duration menu")
 
-                            case 5:
-                                print("You are now on the clear timers menu")
+                                    case 5:
+                                        print("You are now on the clear timers menu")
+
+                                    case 6: stayinCallDurationMenu = False
 
 
                     case 7:
 
                         showCallCosts = """
-                            You are now on the Show call duration Menu.
-                            Please enter a number
-                            to select an option.
+    You are now on the Show call duration Menu.
+    Please enter a number
+    to select an option.
 
-                            ════════════════════════════════
-                               SHOW CALL COSTS MENU
-                            ════════════════════════════════
+    ════════════════════════════════
+       SHOW CALL COSTS MENU
+    ════════════════════════════════
 
-                                  1. Last Call Cost
-                                  2. All calls Cost
-                                  3. Clear Counters
+          1. Last Call Cost
+          2. All calls Cost
+          3. Clear Counters
 
-                            ════════════════════════════════
+    ════════════════════════════════
                         """
 
                         showCallCostChoice = int(input(f"{showCallCosts}"))
@@ -222,19 +270,19 @@ while running:
                     case 8:
 
                         showCallCostSettings = """
-                            You are now on the Show call duration Menu.
-                            Please enter a number
-                            to select an option.
+    You are now on the Show call duration Menu.
+    Please enter a number
+    to select an option.
 
-                            ════════════════════════════════
-                             SHOW CALL COSTS SETTINGS MENU
-                            ════════════════════════════════
+    ════════════════════════════════
+     SHOW CALL COSTS SETTINGS MENU
+    ════════════════════════════════
 
-                                  1. Last Call Cost
-                                  2. All calls Cost
-                                  3. Clear Counters
+          1. Last Call Cost
+          2. All calls Cost
+          3. Clear Counters
 
-                            ════════════════════════════════
+    ════════════════════════════════
                         """
 
                         showCallCostSettingsChoice = int(input(f"{showCallCostSettings}"))
@@ -280,18 +328,18 @@ while running:
             while stayinCallRegister:
 
                 showCallRegister = """
-                You are now on the Call Register Menu.
-                Please enter a number
-                to select an option.
+    You are now on the Call Register Menu.
+    Please enter a number
+    to select an option.
 
-                ════════════════════════════════
-                    SHOW CALL REGISTER MENU
-                ════════════════════════════════
+    ════════════════════════════════
+        SHOW CALL REGISTER MENU
+    ════════════════════════════════
 
-                      1. Missed Calls
-                      10. Back
+          1. Missed Calls
+          10. Back
 
-                ════════════════════════════════
+    ════════════════════════════════
                  """
 
                 showCallRegisterChoice = int(input(f"{showCallRegister}"))
@@ -312,22 +360,22 @@ while running:
             while stayinTonesMenu:
 
                 showTonesMenu = """
-                You are now on the Call Register Menu.
-                Please enter a number
-                to select an option.
+    You are now on the Call Register Menu.
+    Please enter a number
+    to select an option.
 
-                ════════════════════════════════
-                        SHOW TONES MENU
-                ════════════════════════════════
+    ════════════════════════════════
+            SHOW TONES MENU
+    ════════════════════════════════
 
-                      1. Ringing tone
-                      2. Ringing volume
-                      3. Incoming call alert
-                      4. Message alert tone
-                      5. Keypad tones
-                      10. Back
+          1. Ringing tone
+          2. Ringing volume
+          3. Incoming call alert
+          4. Message alert tone
+          5. Keypad tones
+          10. Back
 
-                ════════════════════════════════
+    ════════════════════════════════
             """
 
                 showTonesMenuChoice = int(input(f"{showTonesMenu}"))
@@ -366,21 +414,21 @@ while running:
             while stayinSettingsMenu:
 
                 settingsMenu = """
-                You are now on the Settings Menu.
-                Please enter a number
-                to select an option.
+    You are now on the Settings Menu.
+    Please enter a number
+    to select an option.
 
-                ════════════════════════════════
-                        SETTINGS MENU
-                ════════════════════════════════
+    ════════════════════════════════
+            SETTINGS MENU
+    ════════════════════════════════
 
-                      1. Call Settings
-                      2. Phone Settings
-                      3. Security Settings
-                      4. Restore factory settings
-                      10. Back
+          1. Call Settings
+          2. Phone Settings
+          3. Security Settings
+          4. Restore factory settings
+          10. Back
 
-                ════════════════════════════════
+    ════════════════════════════════
             """
 
                 settingsMenuChoice = int(input(f"{settingsMenu}"))
@@ -389,63 +437,72 @@ while running:
 
                     case 1:
 
-                        callSettings = """
-                        You are now on the Call Settings Menu.
-                        Please enter a number
-                        to select an option.
+                        stayinCallSettingsMenu = True
 
-                        ════════════════════════════════
-                              CALL SETTINGS MENU
-                        ════════════════════════════════
+                        while stayinCallSettingsMenu:
 
-                              1. Automatic redial
-                              2. Speed dialing
-                              3. Call waiting options
-                              4. Own number sending
-                              5. Phone line in use
-                              6. Automatic answer
+                                callSettings = """
+            You are now on the Call Settings Menu.
+            Please enter a number
+            to select an option.
 
-                        ════════════════════════════════
-                    """
+            ════════════════════════════════
+                  CALL SETTINGS MENU
+            ════════════════════════════════
 
-                        callSettingsMenuChoice = int(input(f"{callSettings}"))
+                  1. Automatic redial
+                  2. Speed dialing
+                  3. Call waiting options
+                  4. Own number sending
+                  5. Phone line in use
+                  6. Automatic answer
+                  7. Back
 
-                        match callSettingsMenuChoice:
+            ════════════════════════════════
+                            """
 
-                            case 1:
-                                print("You are now on the Automatic redial Menu")
 
-                            case 2:
-                                print("You are now on the speed dialing menu")
+                                callSettingsMenuChoice = int(input(f"{callSettings}"))
 
-                            case 3:
-                                print("You are now on the call own number sending menu")
+                                match callSettingsMenuChoice:
 
-                            case 4:
-                                print("You are now on the phone line in use menu")
+                                    case 1:
+                                        print("You are now on the Automatic redial Menu")
 
-                            case 6:
-                                print("You are now on the Keypad tones Menu")
+                                    case 2:
+                                        print("You are now on the speed dialing menu")
+
+                                    case 3:
+                                        print("You are now on the call own number sending menu")
+
+                                    case 4:
+                                        print("You are now on the phone line in use menu")
+
+                                    case 6:
+                                        print("You are now on the Keypad tones Menu")
+
+                                    case 7: 
+                                        stayinCallSettingsMenu = False
 
 
                     case 2:
 
                         phoneSettingsMenu = """
-                        You are now on the phone Settings Menu.
-                        Please enter a number 
-                        to select an option.
+    You are now on the phone Settings Menu.
+    Please enter a number 
+    to select an option.
 
-                        ════════════════════════════════
-                              PHONE SETTINGS MENU
-                        ════════════════════════════════
+    ════════════════════════════════
+          PHONE SETTINGS MENU
+    ════════════════════════════════
 
-                              1. Language
-                              2. Cell Info display
-                              3. Welcome note
-                              4. Network Selection
-                              5. Confirm SIM service actions
+          1. Language
+          2. Cell Info display
+          3. Welcome note
+          4. Network Selection
+          5. Confirm SIM service actions
 
-                        ════════════════════════════════
+    ════════════════════════════════
                     """
 
                         phoneSettingsMenuChoice = int(input(f"{phoneSettingsMenu}"))
@@ -467,49 +524,59 @@ while running:
                             case 6:
                                 print("You are now on the Confirm sim service actions Menu")
 
+                            case _:
+                                print("Invalid")
+                               
+
 
                     case 3:
+                        stayinSecuritySettings = True
+                    
+                        while(stayinSecuritySettings):
+                
+                                securitySettingsMenu = """
+            You are now on the security Settings Menu.
+            Please enter a number
+            to select an option.
 
-                        securitySettingsMenu = """
-                        You are now on the security Settings Menu.
-                        Please enter a number
-                        to select an option.
+            ════════════════════════════════
+                 SECURITY SETTINGS MENU
+            ════════════════════════════════
 
-                        ════════════════════════════════
-                             SECURITY SETTINGS MENU
-                        ════════════════════════════════
+                  1. PINcode request
+                  2. Call barring service
+                  3. Fixed dialing
+                  4. Closed user group
+                  5. Security level
+                  6. Change access codes
+                  7. Back
 
-                              1. PINcode request
-                              2. Call barring service
-                              3. Fixed dialing
-                              4. Closed user group
-                              5. Security level
-                              6. Change access codes
+            ════════════════════════════════
+                            """
 
-                        ════════════════════════════════
-                    """
+                                securitySettingsMenuChoice = int(input(f"{securitySettingsMenu}"))
 
-                        securitySettingsMenuChoice = int(input(f"{securitySettingsMenu}"))
+                                match securitySettingsMenuChoice:
 
-                        match securitySettingsMenuChoice:
+                                    case 1:
+                                        print("You are now on the PIN code request Menu")
 
-                            case 1:
-                                print("You are now on the PIN code request Menu")
+                                    case 2:
+                                        print("You are now on the call barring service menu")
 
-                            case 2:
-                                print("You are now on the call barring service menu")
+                                    case 3:
+                                        print("You are now on the fixed dialing  menu")
 
-                            case 3:
-                                print("You are now on the fixed dialing  menu")
+                                    case 4:
+                                        print("You are now on the closed user group menu")
 
-                            case 4:
-                                print("You are now on the closed user group menu")
+                                    case 5:
+                                        print("You are now on the security level Menu")
 
-                            case 6:
-                                print("You are now on the security level Menu")
+                                    case 6:
+                                        print("You are now on the change access codes Menu")
 
-                            case 7:
-                                print("You are now on the change access codes Menu")
+                                    case 7: stayinSecuritySettings = False
 
 
                     case 4:
@@ -544,21 +611,21 @@ while running:
             while stayinMusicMenu:
 
                 musicMenu = """
-                You are now on the Music Settings Menu.
-                Please enter a number
-                to select an option.
+    You are now on the Music Settings Menu.
+    Please enter a number
+    to select an option.
 
-                ════════════════════════════════
-                     MUSIC SETTINGS MENU
-                ════════════════════════════════
+    ════════════════════════════════
+         MUSIC SETTINGS MENU
+    ════════════════════════════════
 
-                      1. Music player
-                      2. Radio
-                      3. Recorder
-                      4. Track list
-                      10. Back
+          1. Music player
+          2. Radio
+          3. Recorder
+          4. Track list
+          10. Back
 
-                ════════════════════════════════
+    ════════════════════════════════
             """
 
                 musicMenuChoice = int(input(f"{musicMenu}"))
@@ -646,19 +713,19 @@ while running:
                 Please enter a number
                 to select an option.
 
-                ════════════════════════════════
-                     CLOCK SETTINGS MENU
-                ════════════════════════════════
+    ════════════════════════════════
+         CLOCK SETTINGS MENU
+    ════════════════════════════════
 
-                      1. Alarm Clock
-                      2. Clock Settings
-                      3. Date Settings
-                      4. Stop watch
-                      5. Countdown Timer
-                      6. Auto update of date and time
-                      10. Back
+          1. Alarm Clock
+          2. Clock Settings
+          3. Date Settings
+          4. Stop watch
+          5. Countdown Timer
+          6. Auto update of date and time
+          10. Back
 
-                ════════════════════════════════
+    ════════════════════════════════
             """
 
                 clockMenuChoice = int(input(f"{clockMenu}"))
@@ -743,3 +810,7 @@ while running:
 
         case 16:
             running = False
+
+        case _:
+             print("Invalid")
+            
